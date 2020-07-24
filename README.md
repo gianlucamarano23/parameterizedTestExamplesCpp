@@ -1,3 +1,5 @@
+If you want to learn more about parameterized tests, please read [this article](http://sandordargo.com/blog/2019/04/24/parameterized-testing-with-gtest).
+
 To compile and run your tests, you you will need:
   - make, cmake and a C++ compiler (like gcc) is installed on your system and is in the PATH
   - The GTest framework in the directory gtest.
