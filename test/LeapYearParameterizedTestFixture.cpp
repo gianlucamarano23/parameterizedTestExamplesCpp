@@ -12,7 +12,7 @@ TEST_P(LeapYearParameterizedTestFixture, OddYearsAreNotLeapYears) {
     ASSERT_FALSE(leapYearCalendar.isLeap(year));
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
         LeapYearTests,
         LeapYearParameterizedTestFixture,
         ::testing::Values(

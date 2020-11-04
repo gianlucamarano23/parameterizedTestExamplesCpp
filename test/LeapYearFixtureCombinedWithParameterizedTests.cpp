@@ -36,7 +36,7 @@ TEST_P(LeapYearParametrizedTestFixtureBasedOnFixture, ChecksIfLeapYear) {
     ASSERT_EQ(expected, leapYearCalendar.isLeap(year));
 }
 
-INSTANTIATE_TEST_CASE_P(
+INSTANTIATE_TEST_SUITE_P(
         LeapYearTests,
         LeapYearParametrizedTestFixtureBasedOnFixture,
         ::testing::Values(
