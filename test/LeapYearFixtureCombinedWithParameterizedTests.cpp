@@ -5,27 +5,27 @@
 #include "../include/LeapYearCalendar.h"
 
 
-class LeapYearTestFixtureToBeParameterized : public ::testing::Test
+class LeapYearFixtureCombinedWithParameterizedTests : public ::testing::Test
 {
 protected:
     LeapYearCalendar leapYearCalendar;
 };
 
-TEST_F(LeapYearTestFixtureToBeParameterized, 1996_IsDivisibleBy4_ShouldBeALeapYear) {
+TEST_F(LeapYearFixtureCombinedWithParameterizedTests, 1996_IsDivisibleBy4_ShouldBeALeapYear) {
     ASSERT_TRUE(leapYearCalendar.isLeap(1996));
 }
 
-TEST_F(LeapYearTestFixtureToBeParameterized, 1700_IsDivisibleBy100AndNotBy400_ShouldNotBeALeapYear) {
+TEST_F(LeapYearFixtureCombinedWithParameterizedTests, 1700_IsDivisibleBy100AndNotBy400_ShouldNotBeALeapYear) {
     ASSERT_FALSE(leapYearCalendar.isLeap(1700));
 }
 
-TEST_F(LeapYearTestFixtureToBeParameterized, 1600_IsDivisibleBy400_ShouldBeALeapYear) {
+TEST_F(LeapYearFixtureCombinedWithParameterizedTests, 1600_IsDivisibleBy400_ShouldBeALeapYear) {
     ASSERT_TRUE(leapYearCalendar.isLeap(1600));
 }
 
 
 class LeapYearParametrizedTestFixtureBasedOnFixture :
-        public LeapYearTestFixtureToBeParameterized,
+        public LeapYearFixtureCombinedWithParameterizedTests,
         public ::testing::WithParamInterface<std::tuple<int, bool>> {
 };
 
