@@ -1,4 +1,4 @@
-#include <../include/LeapYearCalendar.h>
+#include "../include/LeapYearCalendar.h"
 
 bool LeapYearCalendar::isLeap(int year){
     return isDivisibleBy4(year) and (!isDivisibleBy100(year) or isDivisibleBy400(year));
