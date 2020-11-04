@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <LeapYearCalendar.h>
+#include "../include/LeapYearCalendar.h"
 
 TEST(LeapYearIterationTest, OddYearsAreNotLeapYears) {
     LeapYearCalendar leapYearCalendar;
